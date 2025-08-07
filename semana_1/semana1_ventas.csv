@@ -1,0 +1,13 @@
+fecha,cliente,producto,precio,cantidad,metodo_pago
+2025-08-01,Ana,Manzana,100,3,tarjeta
+2025-08-01,Luis,Banana,50,5,efectivo
+2025-08-01,Sofía,Pera,80,2,tarjeta
+2025-08-02,Marcos,Notebook,350000,1,transferencia
+2025-08-02,Ana,Mouse,8000,2,tarjeta
+2025-08-02,Luis,Cargador,6000,1,efectivo
+2025-08-03,Laura,Teclado,2500,1,tarjeta
+2025-08-03,Sofía,Tablet,30000,1,transferencia
+2025-08-03,Ana,Manzana,100,1,efectivo
+2025-08-04,Luis,Banana,50,2,tarjeta
+2025-08-04,Marcos,Campera,8000,1,tarjeta
+2025-08-04,Laura,Remera,2000,2,efectivo
