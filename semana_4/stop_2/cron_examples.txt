@@ -1,0 +1,6 @@
+# Ejemplos de cron para pipeline_runner.py
+# Ejecutar todos los días a las 03:00 hora del servidor
+0 3 * * * /usr/bin/python3 /path/al/proyecto/pipeline_runner.py >> /path/al/proyecto/outputs_stop3/cron.log 2>&1
+
+# Ejecutar cada hora al minuto 15
+15 * * * * /usr/bin/python3 /path/al/proyecto/pipeline_runner.py >> /path/al/proyecto/outputs_stop3/cron.log 2>&1

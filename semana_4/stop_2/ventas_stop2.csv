@@ -1,0 +1,11 @@
+fecha,cliente,producto,precio,cantidad,categoria
+2025-07-01,Cliente A,Producto 1,100,2,Bebidas
+2025-07-02,Cliente B,Producto 2,50,5,Snacks
+2025-07-03,Cliente C,Producto 1,100,1,Bebidas
+2025-07-04,Cliente A,Producto 3,200,1,Lácteos
+2025-07-05,Cliente D,Producto 2,50,2,Snacks
+2025-07-06,Cliente E,Producto 4,150,3,Lácteos
+2025-07-07,Cliente F,Producto 5,80,4,Panadería
+2025-07-08,Cliente G,Producto 3,200,2,Lácteos
+2025-07-09,Cliente H,Producto 1,100,3,Bebidas
+2025-07-10,Cliente I,Producto 4,150,1,Lácteos

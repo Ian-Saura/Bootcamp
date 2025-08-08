@@ -1,13 +1,16 @@
-WITH ventas_region AS (
-    SELECT c.region, SUM(v.cantidad * v.precio) AS ingresos
+WITH ingresos_categoria AS (
+    SELECT p.categoria,
+           SUM(v.cantidad * v.precio) AS ingresos
     FROM ventas v
-    JOIN clientes c ON v.cliente_id = c.id
-    GROUP BY c.region
+    INNER JOIN productos p ON v.producto_id = p.id
+    GROUP BY p.categoria
 ),
-total_ingresos AS (
-    SELECT SUM(ingresos) AS total FROM ventas_region
+total_global AS (
+    SELECT SUM(ingresos) AS total FROM ingresos_categoria
 )
-SELECT vr.region,
-       ROUND((vr.ingresos / ti.total) * 100, 2) AS porcentaje
-FROM ventas_region vr
-CROSS JOIN total_ingresos ti;
+SELECT ic.categoria,
+       ic.ingresos,
+       ROUND((ic.ingresos / tg.total) * 100, 2) AS porcentaje
+FROM ingresos_categoria ic
+CROSS JOIN total_global tg
+ORDER BY porcentaje DESC;
