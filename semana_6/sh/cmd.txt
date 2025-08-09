@@ -1,0 +1,10 @@
+#step_dim.sh (arrancá mostrando un error y después arreglalo cambiando exit 1 por exit 0)
+
+chmod +x pipeline.sh step_*.sh
+mkdir -p data logs
+echo "fecha,cliente,producto,precio,cantidad" > data/ventas.csv
+./pipeline.sh   # primera vez falla en DIM y se corta; luego arreglá DIM y volvé a correr
+
+
+chron ejemplo
+0 3 * * * /usr/bin/env bash /home/user/proyecto/pipeline.sh >> /home/user/proyecto/logs/pipeline.cron.log 2>&1
