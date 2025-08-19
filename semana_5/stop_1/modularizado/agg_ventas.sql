@@ -7,4 +7,4 @@ SELECT
 FROM base
 GROUP BY mes;
 
---Cada archivo tiene un propósito claro y puede ser testeado individualmente
+--Cada archivo tiene un propósito claro y puede ser testeado individualmente`
