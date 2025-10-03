@@ -1,8 +1,19 @@
+-- Attach the productos database
+ATTACH DATABASE 'semana_3/database/productos.duckdb' AS productos_db;
+
+-- Attach the clientes database
+ATTACH DATABASE 'semana_3/database/clientes.duckdb' AS clientes_db;
+
+-- Attach the ventas database
+ATTACH DATABASE 'semana_3/database/ventas.duckdb' AS ventas_db;
+
+
+
 WITH ingresos_categoria AS (
     SELECT p.categoria,
            SUM(v.cantidad * v.precio) AS ingresos
-    FROM ventas v
-    INNER JOIN productos p ON v.producto_id = p.id
+    FROM ventas_db.ventas v
+    INNER JOIN productos_db.productos p ON v.producto_id = p.id
     GROUP BY p.categoria
 ),
 total_global AS (
