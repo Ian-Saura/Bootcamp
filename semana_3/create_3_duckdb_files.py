@@ -123,3 +123,7 @@ print("   duckdb productos.duckdb < tu_query.sql")
 print("   duckdb clientes.duckdb < tu_query.sql")
 print("   duckdb ventas.duckdb < stop_1.sql")
 
+
+
+
+
